@@ -1,0 +1,105 @@
+.aside
+	display: inline-block
+	vertical-align: top
+	width: 20%
+	+r(650)
+		position: absolute
+		width: 220px
+	&__header
+		position: relative
+		display: flex
+		// align-items: flex-start
+		justify-content: flex-start
+		margin-bottom: 48px
+		cursor: pointer
+		align-items: center
+		+r(650)
+			margin-bottom: 30px
+		.title__aside
+			margin-bottom: 0
+		svg
+			display: inline-block
+			vertical-align: top
+			width: 16px
+			height: 16px
+			margin-top: 4px
+			margin-left: 10px
+			fill: $white
+			+tr(.4s)
+	&__list
+		padding: 0 0 0 20px
+		margin: 0
+		list-style: none
+		max-height: 10000px
+		+r(650)
+			position: absolute
+			top: 100%
+			left: 0
+			width: calc( 65vw - 40px)
+			padding: 20px
+			background-color: #252525
+			z-index: 10
+	&__item
+		margin-bottom: 15px
+		&:hover
+			background-color: $dark
+			a
+				color: $red-dark
+		&.is-active
+			a
+				font-size: 40px
+				color: $red
+				+r(1430)
+					font-size: 3.2vw
+				+r(650)
+					font-size: 22px
+	&__link
+		display: block
+		font-size: 27px
+		color: $white
+		+rr
+		&:hover
+			color: $red-dark
+		+r(1430)
+			font-size: 2vw
+		+r(650)
+			font-size: 18px
+	&.is-closed
+		position: absolute
+		top: 40px
+		left: 20px
+		width: auto
+		align-items: flex-start
+		.aside__header
+			align-items: center
+			svg
+				+rotate(180)
+		.aside__list
+			display: none
+			max-height: 0
+			padding-bottom: 0
+		& + *
+			width: 100%
+	& + *
+		+r(650)
+			width: 100%
+
+.has-rside
+	.aside
+		+r(1025)
+			position: absolute
+			width: 220px
+		&__list
+			+r(1025)
+				position: absolute
+				top: 100%
+				left: 0
+				width: calc( 65vw - 40px)
+				padding: 20px
+				background-color: #252525
+				z-index: 10
+			+r(650)
+				width: calc( 96vw - 40px)
+		& + *
+			+r(1025)
+				width: 100%

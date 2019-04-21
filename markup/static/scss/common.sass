@@ -1,0 +1,551 @@
+
+*
+	box-sizing: border-box
+	outline: none
+	&:after,
+	&:before
+		box-sizing: inherit
+
+html
+	+selection
+		background: rgba(0, 0, 0, .2)
+		color: #fff
+
+html, body
+	height: 100%
+	background-color: $black
+	color: $white
+body
+	color: rgba(0, 0, 0, .7)
+	font-size: 16px
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	-webkit-text-size-adjust: none
+	-ms-text-size-adjust: none
+	text-size-adjust: none
+	+rr
+
+a
+	text-decoration: none
+	outline: none
+
+button
+	background-color: $n
+	border: none
+	outline: none
+	padding: 0
+	cursor: pointer
+
+h1, h2, h3, h4, h5, h6
+	margin: 0 0 .8em
+	font-weight: normal
+	line-height: 1.1
+h1
+	font-size: 2em
+h2
+	font-size: 1.8em
+h3
+	font-size: 1.6em
+h4
+	font-size: 1.5em
+h5
+	font-size: 1.4em
+h6
+	font-size: 1.3em
+
+b, strong
+	font-weight: normal
+p
+	margin: 0
+
+.page
+	&-scrolled
+		.header
+			background-color: #333
+			box-shadow: 0 0 32px rgba(0, 0, 0, .4)
+.page__wrapper
+	position: relative
+	min-height: 100vh
+	padding-bottom: 312px // footer height
+	+tr(.8s)
+	+r(1025)
+		padding-bottom: 0
+
+.page-list
+	text-align: center
+	list-style: none
+	margin: 0px 0 10px
+	padding: 160px 0 0
+	li
+		margin-bottom: 10px
+	a
+		color: $white
+		&:hover
+			color: $red
+
+.layout
+	width: 100%
+	max-width: 1684px
+	margin: 0 auto
+	padding: 0 20px
+
+.content
+	.layout
+		position: relative
+		display: flex
+		justify-content: space-between
+		margin-top: 40px
+		padding-top: 40px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 8%
+			right: 8%
+			height: 2px
+			background-color: $dark
+		&.has-rside
+			+r(1025)
+				flex-direction: column
+	&__text
+		margin-bottom: 20px
+		+clr
+		p
+			margin-bottom: 1em
+	&__img
+		max-width: 40%
+		+r(850)
+			max-width: 60%
+		+r(400)
+			max-width: 100%
+			margin-bottom: 20px
+		&_right
+			float: right
+			margin-left: 20px
+		&_left
+			float: left
+			margin-right: 20px
+
+.price
+	color: $red-dark
+	b
+		font-size: 43px
+		+rbl
+		+r(1220)
+			font-size: 30px
+	span
+		font-size: 21px
+		+rbl
+
+.basket
+	width: 120px
+	height: 32px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 4px 10px
+	background-color: $red
+	color: $white
+	+tr(.4s)
+	&:hover
+		background-color: $red-dark
+	&-icon
+		display: inline-block
+		vertical-align: top
+		svg
+			display: inline-block
+			vertical-align: top
+			width: 20px
+			height: 20px
+	&__text
+		span
+			font-size: 18px
+			color: $white
+			+rr
+
+	&__content
+		margin-bottom: 20px
+		+r(850)
+			overflow: auto
+	&__table
+		width: 100%
+		min-width: 660px
+		// table-layout: fixed
+		border-spacing: 0 4px
+		padding-bottom: 35px
+		.count
+			width: 52px
+		th.basket__col
+			background-color: $black
+			text-align: left
+	&__row
+		width: 100%
+		background-color: $dark
+	&__col
+		max-width: 240px
+		padding: 4px 0px 4px 20px
+		color: $white
+	&__price
+		font-size: 27px
+		+rbl
+	&__title
+		margin: 0
+		font-size: 18px
+		line-height: 1.4
+		color: $white
+		+rbl
+	&__footer
+		+try(20px)
+		background-color: $n
+		.btn__bdr
+			+rbl
+
+.bside
+	width: 78%
+	&.top-offset
+		margin-top: 80px
+.cside
+	width: 50%
+	margin-bottom: 30px
+	.title__b
+		margin-bottom: 1em
+	&.top-offset
+		margin-top: 70px
+.rside
+	width: 20%
+	flex: 0 0 20%
+	margin-left: 20px
+	+r(1025)
+		flex: 0 0 auto
+		width: 100%
+		margin-left: 0
+	.brand__link
+		display: block
+		width: 100%
+		+r(1025)
+			display: inline-block
+			width: 32%
+		+r(850)
+			width: 48%
+		+r(500)
+			width: 100%
+		&__item
+			width: 100%
+	.article
+		flex-direction: column
+		+r(1025)
+			flex-direction: row
+		&__item
+			width: 100%
+			+r(1025)
+				width: 32%
+			+r(850)
+				width: 48%
+			+r(500)
+				width: 100%
+	.brand,
+	.article
+		justify-content: space-around
+
+.count
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: space-between
+	// height: auto
+	font-size: 0
+	border: 2px solid $white
+	svg
+		display: inline-block
+		vertical-align: top
+		width: 12px
+		height: 12px
+		fill: #fff
+	&__nav
+		height: 100%
+	&__up,
+	&__down
+		height: 50%
+		padding-top: 4px
+		padding-left: 4px
+		padding-right: 4px
+		cursor: pointer
+		&:hover
+			background-color: #ccc
+			svg
+				fill: $black
+	&__down
+		+rotate(180)
+	input
+		display: inline-block
+		vertical-align: top
+		border-radius: 0
+		border: none
+		background-color: $n
+		height: 100%
+		width: 30px
+		text-align: center
+		color: $white
+		font-size: 18px
+		+rr
+
+.checkout
+	width: 100%
+	background-color: $dark
+	padding: 20px 15px 60px
+	margin: 0 auto
+	&__tab
+		margin-bottom: 60px
+		&_item
+			display: inline-block
+			vertical-align: top
+			margin-right: 40px
+	&__footer
+		.basket__price
+			color: $white
+		.btn
+			width: 100%
+			max-width: 130px
+			+r(768)
+				max-width: 100%
+		.text-right
+			margin-left: auto
+
+.card
+	position: relative
+	&__row
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 100%
+		font-size: 0
+		margin-bottom: 20px
+	&__col
+		display: inline-block
+		vertical-align: top
+		width: 47%
+		+r(768)
+			width: 100%
+	&__fieldset
+		display: block
+		width: 100%
+		border: none
+		margin: 0 0 20px
+		padding: 0
+		font-size: 18px
+	&__footer
+		color: $white
+	label
+		display: block
+		width: 100%
+		color: $white
+		margin-bottom: .4em
+		font-size: 12px
+		+rr
+	input
+		border-radius: 0
+		border: none
+		display: inline-block
+		vertical-align: top
+		height: 48px
+		max-width: 100%
+		width: 100%
+		padding: 0 16px
+		color: $black
+		+placeholder
+			color: $dark
+	textarea
+		display: block
+		width: 100%
+		height: 190px
+		resize: none
+
+.checkbox
+	position: relative
+	display: inline-block
+	margin-bottom: 15px
+	input
+		position: absolute
+		top: 2px
+		left: 0
+		z-index: 2
+		opacity: 0
+		&:checked
+			~ span
+				user-select: none
+				&:before
+					background-color: #fff
+				&:after
+					content: ""
+					position: absolute
+					top: 1px
+					left: 2px
+					display: inline-block
+					width: 10px
+					height: 10px
+					background-color: $red
+					border-radius: 100%
+					// +s(icon-selector-checked)
+		&:disabled
+			~ span
+				opacity: 1
+				&:before
+					background-color: $dark
+	span
+		position: relative
+		padding-left: 28px
+		left: 0
+		top: 0
+		font-size: 14px
+		color: $white
+		cursor: pointer
+		user-select: none
+		+rr
+		z-index: 15
+		&:before
+			content: ""
+			position: absolute
+			top: -1px
+			left: 0
+			width: 14px
+			height: 14px
+			background-color: #fff
+			border: 2px solid #e6e6e6
+			cursor: pointer
+			border-radius: 100%
+			box-shadow: inset 0 0 6px rgba(0, 0, 0, .4)
+			+tr(.4s)
+
+.custom-select
+	position: relative
+	display: inline-block
+	margin-bottom: 30px
+	margin-left: auto
+	+rr
+	+r(650)
+		margin-top: 60px
+		margin-left: 0
+		width: 100%
+	select
+		display: none
+
+.select
+	&-selected
+		&:after
+			position: absolute
+			content: ""
+			top: 18px
+			right: 10px
+			display: inline-block
+			width: 12px
+			height: 8px
+			background-image: url('../img/content/1.svg')
+	&-selected.select-arrow-active
+		// border-bottom: 0
+		&:after
+			+rotate(90)
+	&-items div,
+	&-selected
+		color: #ffffff
+		padding: 12px 30px 12px 16px
+		border: 2px solid $white
+		cursor: pointer
+		background-color: $dark
+		b
+			+rb
+	&-items div
+		border-bottom: none
+		border-top: none
+		padding-top: 8px
+		padding-bottom: 8px
+		&:last-child
+			border-bottom: 2px solid $white
+	&-items
+		position: absolute
+		top: 100%
+		left: 0px
+		right: 0px
+		z-index: 99
+	&-hide
+		display: none
+	&-items div:hover
+		background-color: $black
+
+.show-more
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 10px
+	margin: 30px 0 80px
+	width: 100%
+	background-color: $dark
+	cursor: pointer
+	&:hover
+		.desc__r
+			color: $red
+		svg
+			fill: $red
+	svg
+		display: inline-block
+		vertical-align: top
+		margin-right: 20px
+		fill: $white
+		+tr(.4s)
+	.desc__r
+		+tr(.4s)
+
+.go-top
+	display: inline-block
+	vertical-align: top
+	padding: 5px 6px
+	border-radius: 100%
+	&:hover
+		box-shadow: 0 0 4px rgba(255, 255, 255, .4), inset 0 0 4px rgba(255, 0, 255, .4)
+		svg
+			fill: $red
+	svg
+		display: inline-block
+		vertical-align: top
+		width: 16px
+		height: 16px
+		fill: $white
+		+tr(.4s)
+
+.col-md-30
+	width: 30%
+.col-md-46
+	width: 46%
+.col-md-60
+	width: 60%
+.col-md-65
+	width: 65%
+.col-md-70
+	width: 70%
+	+r(650)
+		width: 100%
+.col-md-80
+	width: 80%
+
+.mod-flex
+	display: flex
+	justify-content: space-between
+.mod-center
+	margin: 0 auto
+.mod-wide
+	width: 100%
+.mod-mb-0
+	margin-bottom: 0
+.mod-mb-10
+	margin-bottom: 10px
+.mod-b80
+	margin-bottom: 80px
+.mod-mob-wrap
+	+r(650)
+		flex-wrap: wrap
+
+
+.text
+	&-right
+		text-align: right
+	&-center
+		text-align: center

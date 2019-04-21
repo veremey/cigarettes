@@ -1,0 +1,126 @@
+$n: transparent
+$white: #fff
+$black: #333
+$dark: #404040
+$red: #ff0046
+$red-dark: #e31d59
+
+
++font('Roboto-Black', 'Roboto-Black')
++font('Roboto-Bold', 'Roboto-Bold')
++font('Roboto-Light', 'Roboto-Light')
++font('Roboto-Medium', 'Roboto-Medium')
++font('Roboto-Regular', 'Roboto-Regular')
++font('Roboto-Thin', 'Roboto-Thin')
+
+=rt
+	font-family: 'Roboto-Thin', Arial, sans-serif
+=rr
+	font-family: 'Roboto-Regular', Arial, sans-serif
+=rm
+	font-family: 'Roboto-Medium', Arial, sans-serif
+=rl
+	font-family: 'Roboto-Light', Arial, sans-serif
+=rb
+	font-family: 'Roboto-Bold', Arial, sans-serif
+=rbl
+	font-family: 'Roboto-Black', Arial, sans-serif
+
+
+.title
+	&__hero
+		font-size: 85px
+		color: $white
+		line-height: 1
+		margin-bottom: 10px
+		+r(850)
+			font-size: 60px
+		+r(650)
+			font-size: 48px
+	&__aside
+		font-size: 27px
+		color: $white
+		line-height: 1
+		margin-bottom: 15px
+		+rb
+	&__b
+		font-size: 27px
+		color: $white
+		line-height: 1
+		margin-bottom: 15px
+		+rbl
+	&__r
+		font-size: 18px
+		color: $white
+		line-height: 1
+		margin-bottom: 15px
+		+rr
+	&__f
+		font-size: 13px
+		color: $red
+		text-transform: uppercase
+		+rb
+
+.desc
+	&__rh
+		font-size: 20px
+		line-height: 1.4
+		color: $white
+		+rr
+	&__r
+		font-size: 18px
+		line-height: 1.4
+		color: $white
+		+rr
+
+
+.btn
+	&__bdr
+		display: flex
+		align-items: center
+		justify-content: center
+		color: $white
+		line-height: 1
+		font-size: 18px
+		padding: 6px 10px
+		border: 2px solid $white
+		+tr(.4s)
+		cursor: pointer
+		&:hover
+			border-color: $red-dark
+			color: $red-dark
+	&__remove
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 16px
+		height: 16px
+		+tr(.4s)
+		&:hover
+			&:before,
+			&:after
+				background-color: $red
+		&:before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: -1px
+			left: -1px
+			width: 19px
+			height: 2px
+			background-color: $white
+			transform: translateY(8px) rotate(45deg)
+			+tr(.4s)
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			bottom: -1px
+			left: -1px
+			width: 19px
+			height: 2px
+			background-color: $white
+			transform: translateY(-8px) rotate(-45deg)
+			+tr(.4s)
+
+

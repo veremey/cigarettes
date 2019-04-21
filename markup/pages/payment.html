@@ -1,0 +1,114 @@
+<!doctype html>
+<html  lang="en-US">
+
+<head>
+	{{> head/head head.defaults}}
+</head>
+
+<body class="page">
+
+	<div class="page__wrapper">
+		{{> header/header}}
+		{{> hero/hero hero.payment}}
+
+		<div class="content mod-b80	">
+			<div class="layout  has-rside">
+				<aside class="aside">
+					{{> aside/aside}}
+				</aside>
+				<!-- cside -->
+				<div class="cside top-offset">
+					<div class="checkout">
+						<div class="card">
+							<div class="card__row">
+								<div class="card__col col-md-30">
+									<h3 class="title__r" role="heading" aria-level="3">Payment Details</h3>
+									<p class="desc__r">John Doe</p>
+									<p class="desc__r"><i class="icon-visa"></i> ending in 4781</p>
+								</div>
+								<div class="card__col col-md-65">
+									<h3 class="title__r" role="heading" aria-level="3">Delivery Details</h3>
+									<p class="desc__r">John Doe, 3563  Crummit Lane, Omaha NE 68102 United States, +1(302)5022936</p>
+								</div>
+							</div>
+						</div>
+						<!--  -->
+						<div class="checkout__footer">
+							<div class="card__row">
+								<div class="card__col"></div>
+								<div class="card__col mod-flex">
+									<div class="card__col col-md-46">
+										<p class="desc__r text-right">Total</p>
+									</div>
+									<div class="card__col col-md-46">
+										<div class="basket__price">$<span>175.32</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card__row">
+								<div class="card__col"></div>
+								<div class="card__col mod-flex">
+									<div class="card__col col-md-46 ">
+										<button class="btn btn__bdr text-right">Back</button>
+									</div>
+									<div class="card__col col-md-46">
+										<button class="btn btn__bdr">Checkout</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- rside -->
+				<div class="rside ">
+					<h2 class="title__b" aria-level="2" role="heading">YOU MAY ALSO LIKE</h2>
+
+					<div class="brand">
+						<a href="#" class="brand__link">
+							<div class="brand__pic">
+								<img src="static/img/content/img-01.jpg" alt="Marlboro" class="brand__img">
+							</div>
+							<div class="brand__box">
+								<h2 class="title__b" role="heading" aria-level="2">Marlboro Red Cigarettes</h2>
+							</div>
+							<div class="brand__footer">
+								<div class="price">
+									<b>$5</b>
+									<span>per pack</span>
+								</div>
+							</div>
+						</a>
+
+						<a href="#" class="brand__link">
+							<div class="brand__pic">
+								<img src="static/img/content/img-01.jpg" alt="Marlboro" class="brand__img">
+							</div>
+							<div class="brand__box">
+								<h2 class="title__b" role="heading" aria-level="2">Marlboro Red Cigarettes</h2>
+							</div>
+							<div class="brand__footer">
+								<div class="price">
+									<b>$5</b>
+									<span>per pack</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--  -->
+
+		<div class="page__buffer"></div>
+		{{> footer/footer}}
+
+	</div>
+
+	<script src="static/js/separate-js/jQuery.min.js"></script>
+	<script src="static/js/separate-js/common.js"></script>
+
+</body>
+
+</html>

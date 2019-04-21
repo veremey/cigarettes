@@ -1,0 +1,25 @@
+
+<div class="brand">
+	{{#each item}}
+		<div class="brand__item {{#if mod}}brand__item_{{mod}}{{/if}}">
+			<div class="brand__pic">
+				<img src="{{img}}" alt="{{title}}" class="brand__img">
+			</div>
+			<div class="brand__box">
+				<div class="brand__box_wrap">
+					<h2 class="title__b" role="heading" aria-level="2">{{title}}</h2>
+					<div class="brand__text">
+						<p class="desc__r">{{desc}}</p>
+					</div>
+					<div class="brand__footer">
+						<div class="price">
+							<b>${{price}}</b>
+							<span>{{for}}</span>
+						</div>
+						<button class="brand__btn">Add to cart</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	{{/each}}
+</div>

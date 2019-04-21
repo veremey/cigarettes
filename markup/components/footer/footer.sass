@@ -1,0 +1,86 @@
+
+.footer
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+
+	background-color: $dark
+	padding: 50px 0
+	+r(1025)
+		position: relative
+	&__column
+		display: flex
+		// width: 25%
+		+r(1025)
+			margin-bottom: 30px
+			justify-content: center
+	&__list
+		list-style: none
+		padding: 0
+		margin: 0 40px 0 0
+		+r(1025)
+			width: 22%
+			margin: 0px
+		+r(650)
+			width: 48%
+		+r(400)
+			width: 100%
+	&__item
+		margin-bottom: 18px
+	&__link
+		color: $white
+		font-size: 13px
+		text-transform: uppercase
+		+rb
+		+tr(.4s)
+		&:hover
+			color: $red
+	&__item
+		color: $white
+	.layout
+		display: flex
+		justify-content: space-between
+		+r(1025)
+			flex-direction: column
+			justify-content: center
+	.mod-order
+		&-0
+			order: -4
+		&-1
+			order: -3
+		&-2
+			order: -2
+		&-3
+			order: -1
+	.socio
+		+r(400)
+			margin-right: auto
+
+
+.socio
+	list-style: none
+	padding: 0
+	margin: 0
+	&__item
+		margin-bottom: 10px
+		&:hover
+			.socio__link
+				color: $red
+			svg
+				fill: $red-dark
+		svg
+			fill: $white
+			+tr(.4s)
+	&__link
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		color: $white
+		font-size: 14px
+		font-family: Arial, sans-serif
+		+tr(.4s)
+	&__icon
+		display: inline-block
+		vertical-align: top
+		width: 30px

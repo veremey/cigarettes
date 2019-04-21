@@ -1,0 +1,34 @@
+<div class="hero  {{#if mod}} hero_{{hero}}{{/if}}">
+	<div alt="bg picture" aria-hidden="true" class="hero__bg" style="background-image: url({{bg}})"></div>
+	<div class="layout">
+		<div class="hero__content {{#if mod}} hero__content_{{mod}}{{/if}}">
+			<div class="hero__text">
+				<h2 class="title__hero" role="heading" aria-level="2">{{{title}}}</h2>
+
+				{{#if sub}}
+					<h4 class="hero__subtitle" aria-level="4" role="heading">{{sub}}</h4>
+				{{/if}}
+				{{#if btn}}
+					<button class="hero__btn">
+						{{{btn}}}
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+							<g  transform="translate(-987 -374)">
+								<path d="M8,0,6.545,1.455l5.506,5.506H0V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(987 390) rotate(-90)" />
+							</g>
+						</svg>
+					</button>
+				{{/if}}
+			</div>
+		</div>
+
+		<ul class="hero__nav">
+			<li><a href="#">PREMIUM</a></li>
+			<li><a href="#">ECONOMY</a></li>
+			<li><a href="#">MENTHOL</a></li>
+			<li><a href="#">NON FILTER</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
