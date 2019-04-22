@@ -42,9 +42,13 @@
 	&__item
 		margin-bottom: 15px
 		&:hover
-			background-color: $dark
 			a
-				color: $red-dark
+				font-size: 40px
+				color: $red
+				+r(1430)
+					font-size: 3.2vw
+				+r(650)
+					font-size: 22px
 		&.is-active
 			a
 				font-size: 40px

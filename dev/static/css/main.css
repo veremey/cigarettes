@@ -589,11 +589,19 @@ template {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "sport-world";
+  src: url("../fonts/sport-world.woff2") format("woff2"), url("../fonts/sport-world.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .title__hero {
   font-size: 85px;
   color: #fff;
   line-height: 1;
   margin-bottom: 10px;
+  font-family: 'sport-world', Arial, sans-serif;
 }
 
 @media only screen and (max-width: 850px) {
@@ -1043,8 +1051,12 @@ p {
 
 .basket__col {
   max-width: 240px;
-  padding: 4px 0px 4px 20px;
+  padding: 8px 0px 8px 20px;
   color: #fff;
+}
+
+.basket__col:last-child {
+  padding-right: 20px;
 }
 
 .basket__price {
@@ -1776,12 +1788,21 @@ p {
   margin-bottom: 15px;
 }
 
-.aside__item:hover {
-  background-color: #404040;
+.aside__item:hover a {
+  font-size: 40px;
+  color: #ff0046;
 }
 
-.aside__item:hover a {
-  color: #e31d59;
+@media only screen and (max-width: 1430px) {
+  .aside__item:hover a {
+    font-size: 3.2vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .aside__item:hover a {
+    font-size: 22px;
+  }
 }
 
 .aside__item.is-active a {
@@ -2675,7 +2696,18 @@ p {
   height: 100%;
   background-size: cover;
   background-attachment: fixed;
-  background-position: 50% 50%;
+  background-position: 20% 50%;
+}
+
+.hero__bg:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 27, 99, 0.4);
+  pointer-events: none;
 }
 
 .hero__text {
@@ -2802,14 +2834,11 @@ p {
 }
 
 .hero__btn:hover {
-  color: #ff0046;
-  text-shadow: 1px 2px 1px #333;
+  color: #212c90;
 }
 
 .hero__btn:hover svg {
-  fill: #ff0046;
-  -webkit-filter: drop-shadow(1px 2px 1px #333);
-          filter: drop-shadow(1px 2px 1px #333);
+  fill: #212c90;
 }
 
 .hero__btn:hover:before {
