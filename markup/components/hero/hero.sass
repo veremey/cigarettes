@@ -3,6 +3,7 @@
 	position: relative
 	overflow: hidden
 	height: 100vh
+	min-height: 575px
 	&_low
 		height: 60vh
 	&__bg
@@ -102,10 +103,17 @@
 		list-style: none
 		padding: 0
 		margin: 0
+		+r(600)
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
 		li
 			display: inline-block
 			vertical-align: top
 			margin: 0 25px 20px
+			+r(600)
+				width: 50%
+				margin: 0 0 20px
 			&:hover
 				a
 					color: $red

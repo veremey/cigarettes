@@ -10,9 +10,12 @@ $(document).ready(function(){
   $('.trigger').click(function(){
     $(this).toggleClass('is-active');
   });
-  $('.aside__header').click(function(){
-    $(this).parent('.aside').toggleClass('is-closed');
-  });
+
+  if($(document).width() < 1024){
+    $('.aside__header').click(function(){
+      $(this).parent('.aside').toggleClass('is-closed');
+    });
+  }
 
   var $scrollTop = $(document).scrollTop();
   if($scrollTop > 1){
@@ -45,6 +48,11 @@ $(window).on('resize', function(){
     $('.aside').addClass('is-closed');
   } else {
     $('.aside').removeClass('is-closed');
+  }
+  if($(document).width() < 1024){
+    $('.aside__header').click(function(){
+      $(this).parent('.aside').toggleClass('is-closed');
+    });
   }
 });
 

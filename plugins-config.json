@@ -7,7 +7,7 @@
         "server": {
             "baseDir": "./dev"
         },
-        "port": 3004,
+        "port": 8080,
         "open": true,
         "notify": true,
 

@@ -145,7 +145,7 @@
 
 'head': {
     defaults: {
-        title: 'sigaretes',
+        title: 'cigarettes',
         useSocialMetaTags: false
     }
 },

@@ -167,52 +167,128 @@ p
 		margin-bottom: 20px
 		+r(850)
 			overflow: auto
-	&__table
+	&__wrap
+		display: table
 		width: 100%
-		min-width: 660px
+		// min-width: 660px
 		// table-layout: fixed
 		border-spacing: 0 4px
 		padding-bottom: 35px
+		+r(1300)
+			display: block
 		.count
 			width: 52px
+			+r(1300)
+				margin-top: auto
 		th.basket__col
 			background-color: $black
 			text-align: left
 	&__row
+		display: table-row
 		width: 100%
 		background-color: $dark
+		+r(1300)
+			position: relative
+			display: flex
+			justify-content: flex-start
+			flex-wrap: wrap
+			width: 100%
+			margin-bottom: 2px
+	&__header
+		background-color: $n
+		+r(1300)
+			display: none
 	&__col
+		display: table-cell
+		vertical-align: top
 		max-width: 240px
 		padding: 8px 0px 8px 20px
 		color: $white
+		+r(1300)
+			display: flex
+			align-items: flex-start
+		+r(400)
+			padding-left: 14px
 		&:last-child
 			padding-right: 20px
+
 	&__price
+		word-wrap: nowrap
 		font-size: 27px
 		+rbl
+		+r(1300)
+			width: 40%
+		+r(500)
+			font-size: 24px
+			width: auto
+		+r(360)
+			font-size: 22px
+	&__close
+		+r(1300)
+			position: absolute
+			top: 10px
+			right: 20px
+		+r(400)
+			right: 0
 	&__title
 		margin: 0
 		font-size: 18px
 		line-height: 1.4
 		color: $white
 		+rbl
+		+r(1300)
+			padding-right: 40px
+	&__box
+		display: block
+		+r(1300)
+			margin-left: auto
+		&_item
+			display: block
+			white-space: nowrap
+		.desc__kr
+			font-size: 14px
+			margin-bottom: 10px
+			display: none
+			+r(1300)
+				display: block
+	&__name
+		+r(1300)
+			display: flex
+			width: 100%
+			max-width: 100%
+			order: -1
 	&__footer
 		+try(20px)
 		background-color: $n
-		.btn__bdr
+		+r(1300)
+			flex-wrap: nowrap
+		.basket__col
+			+r(1300)
+				width: 100%
+			&_end
+				+r(1300)
+					display: inline-block
+					min-width: 20px
+					width: 20px
+					padding: 0
+			.btn__bdr
 			+rbl
 
 .bside
 	width: 78%
 	&.top-offset
-		margin-top: 80px
+		margin-top: 0
+		+r(1025)
+			margin-top: 80px
+
 .cside
 	width: 50%
 	margin-bottom: 30px
 	.title__b
 		margin-bottom: 1em
 	&.top-offset
-		margin-top: 70px
+		+r(1025)
+			margin-top: 70px
 .rside
 	width: 20%
 	flex: 0 0 20%
@@ -307,7 +383,8 @@ p
 			color: $white
 		.btn
 			width: 100%
-			max-width: 130px
+			// max-width: 130px
+			max-width: 100%
 			+r(768)
 				max-width: 100%
 		.text-right
