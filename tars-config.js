@@ -29,12 +29,12 @@ module.exports = {
     },
     "sourcemaps": {
         "js": {
-            "active": true,
-            "inline": true
+            "active": false,
+            "inline": false
         },
         "css": {
-            "active": true,
-            "inline": true
+            "active": false,
+            "inline": false
         }
     },
     "notifyConfig": {
